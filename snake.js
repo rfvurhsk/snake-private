@@ -84,5 +84,12 @@ function draw() {
   }
 }
 
+// 绑定触屏按钮事件，避免 iOS 延迟
+document.getElementById("up").addEventListener("touchstart", () => changeDirection("ArrowUp"));
+document.getElementById("down").addEventListener("touchstart", () => changeDirection("ArrowDown"));
+document.getElementById("left").addEventListener("touchstart", () => changeDirection("ArrowLeft"));
+document.getElementById("right").addEventListener("touchstart", () => changeDirection("ArrowRight"));
+document.getElementById("restart").addEventListener("touchstart", restartGame);
+
 // 启动游戏
 restartGame();
