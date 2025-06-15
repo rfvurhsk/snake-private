@@ -2,25 +2,43 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>贪吃蛇游戏</title>
+  <title>贪吃蛇 Snake</title>
   <style>
-    body { text-align: center; background: #222; color: white; font-family: sans-serif; }
-    canvas { background: #111; margin-top: 20px; border: 2px solid #555; }
-    button { font-size: 24px; margin: 5px; padding: 10px 20px; }
+    body {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      background: #000;
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #444;
+    }
+    .controls button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+    }
+    #score {
+      font-size: 22px;
+    }
   </style>
 </head>
 <body>
-  <h1>🐍 贪吃蛇 Snake Game</h1>
+  <h1>🐍 贪吃蛇</h1>
   <canvas id="gameCanvas" width="400" height="400"></canvas>
 
-  <div>
-    <button onclick="simulateKey('ArrowUp')">⬆️</button><br/>
-    <button onclick="simulateKey('ArrowLeft')">⬅️</button>
-    <button onclick="simulateKey('ArrowDown')">⬇️</button>
-    <button onclick="simulateKey('ArrowRight')">➡️</button><br/><br/>
+  <div class="controls">
+    <button onclick="changeDirection('ArrowUp')">⬆️</button><br/>
+    <button onclick="changeDirection('ArrowLeft')">⬅️</button>
+    <button onclick="changeDirection('ArrowDown')">⬇️</button>
+    <button onclick="changeDirection('ArrowRight')">➡️</button><br/><br/>
     <button onclick="restartGame()">🔄 重新开始</button>
-    <p>得分：<span id="score">0</span></p>
   </div>
+
+  <p>得分：<span id="score">0</span></p>
 
   <audio id="eatSound" src="apple.mp3"></audio>
   <audio id="deadSound" src="dead.mp3"></audio>
