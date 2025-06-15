@@ -131,10 +131,10 @@ function restartGame() {
   score = 0;
   isDead = false;
   clearInterval(game);
-  game = setInterval(update, 500);
+  game = setInterval(update,300);
   draw();
 }
 
 // 初始开始游戏
-game = setInterval(update, 500);
+game = setInterval(update, 300);
 draw();
