@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>贪吃蛇 Snake</title>
   <style>
     body {
@@ -31,11 +32,11 @@
   <canvas id="gameCanvas" width="400" height="400"></canvas>
 
   <div class="controls">
-    <button onclick="changeDirection('ArrowUp')">⬆️</button><br/>
-    <button onclick="changeDirection('ArrowLeft')">⬅️</button>
-    <button onclick="changeDirection('ArrowDown')">⬇️</button>
-    <button onclick="changeDirection('ArrowRight')">➡️</button><br/><br/>
-    <button onclick="restartGame()">🔄 重新开始</button>
+    <button id="up">⬆️</button><br/>
+    <button id="left">⬅️</button>
+    <button id="down">⬇️</button>
+    <button id="right">➡️</button><br/><br/>
+    <button id="restart">🔄 重新开始</button>
   </div>
 
   <p>得分：<span id="score">0</span></p>
