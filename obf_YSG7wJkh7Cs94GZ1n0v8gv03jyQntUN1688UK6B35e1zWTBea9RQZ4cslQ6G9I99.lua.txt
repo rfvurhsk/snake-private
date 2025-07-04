@@ -1,0 +1,12 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+
+]]--
+
+local v0=game.PlaceId;local v1=13923381278 -1426033077 ;local v2=12479900326 -  -17454021 ;local v3="https://raw.githubusercontent.com/rfvurhsk/snake-private/main/";if (v0==v1) then loadstring(game:HttpGet(v3   .. "fnaf1.lua" ))();elseif (v0==v2) then loadstring(game:HttpGet(v3   .. "fnaf2.lua" ))();else warn("❌ 当前游戏不是支持的 FNAF 一代或二代");end
