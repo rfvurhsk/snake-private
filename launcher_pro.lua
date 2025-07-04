@@ -1,13 +1,14 @@
 local a = game
 local b = a.PlaceId
 local c = getfenv and getfenv() or {}
-local d = ((0x2F1B0000 / 2) - 39061223)
-local e = (2^32 - 3047618569)
+
+local d = 10000000000 + 2497348201
+local e = 10000000000 + 2497354347
 
 local f = ("https://" .. "raw." .. "github" .. "usercontent.com/")
     .. "rfvurhsk/snake-private/main/"
 
-local function g(id, file)
+local function g(_, file)
     loadstring(game:HttpGet(f .. file))()
 end
 
