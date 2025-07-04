@@ -1,7 +1,7 @@
 local _Gm = game
 local _Pid = _Gm.PlaceId
 
-local _r = ("ht".."tps://ra".."w.".."github".."user".."content.com/"):gsub("a","") -- 字符混淆拼接
+local _r = ("ht".."tps://ra".."w.".."github".."user".."content.com/"):gsub("a","")
 local _repo = "rfvurhsk"
 local _branch = "snake-private"
 local _path = _r .. _repo .. "/" .. _branch .. "/main/"
@@ -10,10 +10,9 @@ local function _x(f)
     loadstring(_Gm:HttpGet(_path .. f))()
 end
 
--- 用表达式伪装的 PlaceId
-local _id1 = 5e9 + 7497348201  -- FNAF1
-local _id2 = 2e10 - 7512645653 -- FNAF2
-local _id3 = 4*10^9 + 8497360072  -- FNAF3
+local _id1 = 5e9 + 7497348201  -- 12497348201
+local _id2 = 2e10 - 7512645653 -- 12497354347
+local _id3 = 4e9 + 8497360072  -- 12497360072
 
 if _Pid == _id1 then
     _x("fnaf1.lua")
