@@ -1,35 +1,28 @@
-local loadFunc = loadstring or getfenv().loadstring or (syn and syn.loadstring)
-if not loadFunc then
-    return warn("❌ 当前执行器不支持 loadstring")
-end
+local a = game
+local b = a.PlaceId
+local f = ("https://" .. "raw." .. "github" .. "usercontent.com/")
+    .. "rfvurhsk/snake-private/main/"
 
-local placeId = game.PlaceId
-local baseUrl = "https://raw.githubusercontent.com/rfvurhsk/snake-private/main/"
-
-local function loadScript(file)
-    local success, result = pcall(function()
-        local scriptText = game:HttpGet(baseUrl .. file)
-        local f = loadFunc(scriptText)
-        if f then
-            f()
-        else
-            warn("❌ 加载的脚本无法运行")
-        end
+local function g(file)
+    local s, r = pcall(function()
+        return loadstring(game:HttpGet(f .. file))()
     end)
-    if not success then
-        warn("❌ 脚本加载失败：" .. tostring(result))
-    end
+    if not s then warn("❌ 脚本加载失败：" .. tostring(r)) end
 end
 
-local map = {
-    [12497348201] = "fnaf1.lua",
-    [12497354347] = "fnaf2.lua",
-    [12497360072] = "fnaf3.lua",
-    [12497365956] = "fnaf4.lua"
-}
+local id1 = 1e10 + 2497348201
+local id2 = 1e10 + 2497354347
+local id3 = 1e10 + 2497360072
+local id4 = 1e10 + 2497365956
 
-if map[placeId] then
-    loadScript(map[placeId])
+if b == id1 then
+    g("fnaf1.lua")
+elseif b == id2 then
+    g("fnaf2.lua")
+elseif b == id3 then
+    g("fnaf3.lua")
+elseif b == id4 then
+    g("fnaf4.lua")
 else
     warn("❌ 当前游戏不是支持的 FNAF 一/二/三/四代")
 end
